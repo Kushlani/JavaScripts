@@ -19,10 +19,10 @@ var dollarExchangeRate = 121.72;
 console.log("Total Cost in Ruppees Rs " + totalCost * dollarExchangeRate);
 
 var ruppesAtHand = 69732.89;
-console.log("How many mangos I can buy " + ruppesAtHand / (priceOfAMango * dollarExchangeRate))
+console.log("How many mangos I can buy " + ruppesAtHand / (priceOfAMango * dollarExchangeRate));
 
-var test1 = "40"
-var test2 = "20"
+var test1 = "40";
+var test2 = "20";
 console.log(test1 + test2); // --> 4020
 
 test1 = 40;

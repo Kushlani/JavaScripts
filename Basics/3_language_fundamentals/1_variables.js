@@ -31,3 +31,20 @@ console.log("My name is " + myName);
 //For variables you dont have to use quatations " "
 var printText = " JS is easy...";
 console.log(printText);
+
+/**
+ * Whenever a value is assigned to a variable first the right hand side executes first and then the 
+ * value assigned to the variable.
+ * final value of the right hand side assigned to the variable.
+ */
+
+var greetingString = "Hello " +  "World";
+console.log(greetingString);
+
+var calculation = 10 + 5;
+console.log(calculation);
+
+
+
+
+

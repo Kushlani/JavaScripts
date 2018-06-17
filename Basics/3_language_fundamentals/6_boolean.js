@@ -8,3 +8,4 @@ var sriLanakaIsAnIsland = true;
 var isSydneyACountry = false;
 
 console.log(isSydneyACountry);
+
