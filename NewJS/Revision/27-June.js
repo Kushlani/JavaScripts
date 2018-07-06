@@ -109,11 +109,13 @@ for (var n = (num.length - 1); n >= 0 ; n--) {
 
 }
 
+
+
 //find the highest marks
 var marks = [45,80,35,42,53,90,28,76,87,67];
 var length = marks.length;
 var maxvalue = 0;
-for (i = 0; i <= marks.length; i++) {
+for (i = 0; i <= length; i++) {
 	if ((marks[i]) > maxvalue) {
 		maxvalue = marks[i];
 	}
@@ -134,7 +136,7 @@ for (i = 0; i <= marks.length; i++) {
 }
 console.log(minvalue);*/
 
-console.log("Thhis is  a new demo ")
+console.log("This is  a new demo ");
 
 var number = 6;
 while(number > 0) {

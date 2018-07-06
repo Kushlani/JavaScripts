@@ -308,3 +308,27 @@ for (var a = 1; a <= 100; a++) {
     console.log(a + " factorial : " + multi);
 
 }
+
+
+console.log("Binary Test..." + 27 / 2);
+
+var decimalNumber = 27;
+var collector = "";
+
+for (var i = 0; i < 100; i++) {
+
+    if (decimalNumber > 0) {
+
+        if (decimalNumber % 2 == 0) {
+            decimalNumber = decimalNumber / 2;
+            collector += 0;
+        } else if (decimalNumber > 1) {
+            decimalNumber = (decimalNumber - 1) / 2;
+            collector += 1;
+        } else {
+            collector += 1;
+            decimalNumber = 0;
+        }
+    }
+}
+console.log(collector);

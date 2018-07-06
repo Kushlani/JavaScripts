@@ -1,5 +1,7 @@
 /**
- * In programming, data types is an important concept.
+ * Data types are different kinds of data. Data structure is who keeps/stores that data for updating and organizing purposes.(ex: array and object)
+ * 
+ * In programming, data type is an important concept.
 
 To be able to operate on variables, it is important to know something about the type.
 

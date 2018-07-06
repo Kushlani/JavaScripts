@@ -36,3 +36,49 @@ console.log(fruits[0]);
 
 fruits[1] = "Orange";
 console.log(fruits);
+
+
+//Adding objects to array
+
+var studentOne = {firstName:"Sam",marks:65};
+var studentTwo = {firstName:"Anne",marks:42};
+var studentThree= {firstName:"Paul",marks:87};
+var studentFour = {firstName:"George",marks:55};
+var studentFive = {firstName:"Luara",marks:73};
+var studentSix = {firstName:"Alex",marks:92};
+
+var studentMarks = [studentOne,studentTwo,studentThree,studentFour,studentFive,studentSix];
+var bestMarks = 0;
+for (var x = 0; x <= (studentMarks.length - 1); x++) {
+     if(studentMarks[x].marks > bestMarks) {
+      bestMarks = studentMarks[x].marks;
+   }
+}
+
+console.log(bestMarks);
+
+
+var z = [];
+for (x = 1; x <= 10; x++) {
+    z[z.length] = (x); //or z.push(x)
+ }
+   console.log(z);
+
+
+
+/*
+
+
+var z = [{student}];
+for (var x = 0; x <= (100 -1); x++) {
+    z.push();
+
+    var student = {firstName:"Paul",marks:0};
+for (var y = 0; y <= 100; y++) {
+    console.log(student.marks + y);
+ }
+ }
+   console.log(z);*/
+
+
+var s1 = {name:zzzzUpali,age:40};

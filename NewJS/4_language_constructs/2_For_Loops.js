@@ -151,7 +151,7 @@ for (var s = 300; s <= 600; s++) { //Loop starting 300 --> 600 = 301,302 ...600
 
 
 for (var s = 300; s <= 600; s++) { //Loop starting 300 --> 600 = 301,302 ...600
-    var sum = 0; // number variable 0
+    var sum = 0; // number variable is always start with 0
     sum += s; // sum = 0 + 300 ==> 300, 301, ....599
     console.log(sum); //
 }
