@@ -18,8 +18,10 @@
  * 		properties:value
  * }
  *
- * Objects are hold by object reference variable, objects are mutable 
- *
+ * Objects are hold by object reference variable, objects are mutable,
+ * OBJECT REFERENCE VARIABLES CONTAINS THE MEMEORY ADDRESS OF THE ACTUAL OBJECT 
+ * SO WHENEVER YOU ASSIGN AN OBJECT REFERENCE VARIABLE TO ANOTHER OBJECT REFERENEC VARIABLE THE REAL LOCATION OF THE OBJECT GET COPIED
+ * SO WHATEVER CHANGES YOU MADE ON EITHER OF THE OBEJCT REFERENCE VARIABLES AFFECT THE SAME OBJECT
  *
  * var objectReferenceVariable = <Object Definition>
  *
@@ -129,4 +131,25 @@ studentObject.myNewProperty = "my new property value....";
 
 
 console.log(studentObject.myNewProperty);
+
+/**
+ *	THIS IS VERY IMPORTANT
+ * Objects are mutable 
+ */
+
+var studentA = {
+	name: "Student A",
+	address: "Address",
+	age: 25,
+};
+
+var studentB = studentA;
+studentB.name = "This is student B name";
+console.log(studentA.name); // This is student B name
+
+var x = 100;
+x += 10;
+var y  = x;
+y  = 200;
+console.log(x);// 110
 

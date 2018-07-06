@@ -1,40 +1,125 @@
 /**
- * A JavaScript function is a block of code designed to perform a particular task.
- * A JavaScript function is executed when "something" invokes it (calls it).
- * JavaScript functions are defined with the function keyword.
- * You can use a function declaration or a function expression.
+ * Function is a grouping of a block of codes
  *
- * Why Functions?
-	You can reuse code: Define the code once, and use it many times.
+ * format 
+ *
+ * function functionName(parameters) {
+ * 		return vale //Return value is not mandatory, it is optional
+ * }
+ *
+ * calling a function is also called a function invocation
+ * functionName(parameters)
+ */
 
-	You can use the same code many times with different arguments, to produce different results.
+function thisIsATestFunction(paramOne) {
+	return "This is my test function with " + paramOne;
+}
+
+//Here i am capturing the return value, and also passing a value to the function
+var returnValue = thisIsATestFunction("Kushlani..");
+console.log(returnValue);
+
+//Passing values are not mandatory 
+var anotherReturnValue = thisIsATestFunction(); // here i am not passing any value
+console.log(anotherReturnValue);
+
+/**
+ * Passing values to parameters are not manatory, eventhough this is not possible to do in JAVA
+ */
+function passingValueToParamDemo(a,b,c) {
+	return "This got passed to me A " + a + " B " + b + " C " + c;
+}
+
+console.log(passingValueToParamDemo(10,20,30));
+console.log(passingValueToParamDemo(10,20));
+console.log(passingValueToParamDemo(10));
+console.log(passingValueToParamDemo());
 
 
-Function Declarations :
-    Functions are declared with the following syntax:
+/**
+ * FUNCTIONS ARE OBJECTS IN JS
+ */
 
-	function functionName(parameters) {
-  	code to be executed
+//because functions are objects you can assign them to variables
+
+//Here I am assign a functiion to a variable
+var myFunctionVariable = function sayMyName(name) {
+	return "Hello " + name;
+};
+
+//Here we use variable name to call the function not the actual function name
+var returnedValueFromSayMyName = myFunctionVariable("Kushlani");
+console.log(returnedValueFromSayMyName);
+
+
+/**
+ * Since when you assign a function to a variable the function name can not be used to invoke (call) the function
+ * we dont put the function name when we assign them to variables. 
+ *
+ * THIS IS ALSO CALLED ANNONYMOUS FUNCTIIONS ( SINCE THERE IS NO NAME)
+ * THIS IS ALSO CALLED FUNCTION EXPRPESSIONS
+ */
+
+var thisIsAFunctionExpression = function(x,y) {
+	return "X is : " + x + " Y is : " + y;
+ };
+
+//Calling the function expression
+console.log(thisIsAFunctionExpression(10,20));
+
+/**
+ * Since Function is a Object in JS functions can be passed to another function
+ * This is a main feature of functional programming. (Functional programming is a programming pradigm)
+ * Java doesnt exactly support this.
+ * 
+ */
+
+function multiplyByTen(f) {
+	return f * 10
+};
+
+var sumNumbers = function(x,y) {
+	return x + y;
+}
+
+//Here I am passing multiplyByTen to another function
+var returnFromFunctionsPassingToAnother = multiplyByTen(sumNumbers(5,3));
+console.log(returnFromFunctionsPassingToAnother);
+
+
+var powerOfTwo = function(x) {
+
+	var sum = 1;
+	for ( var i = 1; i < x ; i++) {
+		sum *= 2; 
 	}
-Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).
+	return sum;
+};
 
-	function myFunction(a, b) {
-    return a * b;
-	}
+var multiplyByFive = function(y) {
+	return y * 5;
+};
 
-Function Expressions
-	A JavaScript function can also be defined using an expression.
-	A function expression can be stored in a variable:
+console.log(multiplyByTen(powerOfTwo(4)));
 
-	var x = function (a, b) {return a * b};
+/**
+ * Functions can also be created with builtin functions constructor
+ * This is not common in JS
+ */
+
+var sumOfTwoValue = new Function("x","y","return x+y");
+console.log(sumOfTwoValue(10,20));
 
 
-After a function expression has been stored in a variable, the variable can be used as a function:
+/**
+ * YOU CAN SELF INVOKE A FUNCTIONS
+ *
+ * 	( function() {} )();
+ *
+ * 
+ **/
 
-Ex:
-	var x = function (a, b) {return a * b};
-	var z = x(4, 3);
-
-The function above is actually an anonymous function (a function without a name).
-Functions stored in variables do not need function names. They are always invoked (called) using the variable name.
-*/
+ (function () {
+ 	console.log("Test Function which get self invoked.....");
+ })();
+ 
