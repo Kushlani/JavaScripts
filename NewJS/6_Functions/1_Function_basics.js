@@ -1,5 +1,5 @@
 /**
- * Function is a grouping of a block of codes
+ * Function is a grouping of a block of codes / or A JavaScript function is a block of code designed to perform a particular task.
  *
  * format 
  *
@@ -24,7 +24,7 @@ var anotherReturnValue = thisIsATestFunction(); // here i am not passing any val
 console.log(anotherReturnValue);
 
 /**
- * Passing values to parameters are not manatory, eventhough this is not possible to do in JAVA
+ * Passing values to parameters are not mandatory, eventhough this is not possible to do in JAVA
  */
 function passingValueToParamDemo(a,b,c) {
 	return "This got passed to me A " + a + " B " + b + " C " + c;
@@ -51,6 +51,9 @@ var myFunctionVariable = function sayMyName(name) {
 var returnedValueFromSayMyName = myFunctionVariable("Kushlani");
 console.log(returnedValueFromSayMyName);
 
+//This is also a valid, 
+console.log(myFunctionVariable("Kushlani"));
+
 
 /**
  * Since when you assign a function to a variable the function name can not be used to invoke (call) the function
@@ -75,7 +78,7 @@ console.log(thisIsAFunctionExpression(10,20));
  */
 
 function multiplyByTen(f) {
-	return f * 10
+	return f * 10;
 };
 
 var sumNumbers = function(x,y) {
@@ -122,4 +125,9 @@ console.log(sumOfTwoValue(10,20));
  (function () {
  	console.log("Test Function which get self invoked.....");
  })();
+ 
+
+ (function (x) {
+ 	console.log("Test Function which get self invoked with a passed value : " + x);
+ })(100);
  

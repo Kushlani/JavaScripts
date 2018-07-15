@@ -58,5 +58,41 @@ function Details(Department, Manager, Employee) {
 var details = new Details("Public Finance", "Luara", "Sam");
 details.data();
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function Department(deptName, address) {
+	this.deptName = deptName;
+	this.address = address;
+	
+	this.displayDepartmentInfo = function() {
+		return " Deparment Name : " + this.deptName + " Department Address : " + this.address;
+	};
+}
+
+function Employee(empName,designation,empType,departmentObj) {
+	this.empName = empName;
+	this.designation = designation;
+	this.empType = empType;
+	this.department = departmentObj;
+
+	this.displayEmployeeInfo = function() {
+		return "Emp Name : " + this.empName + ", Designation : " + this.designation +", Emp Type: " + this.empType + 
+		", Deaprtment Name : " + this.deaprtment.deptName + ", Department Address : " + this.department.address;
+	};
+
+}
+
+var eduDepartmentObj = new Department("Finance","Colombo 01");
 
 
+var empdData = new Employee("Kushlani","Admin Assistant","Contract",eduDepartmentObj);
+
+var empdDataArray = [new Employee("Kushlani","Admin Assistant","Contract",eduDepartmentObj),
+	new Employee("Lakshani","Accountant","Permanent",eduDepartmentObj),new Employee("Anne","Manager","Permanent",eduDepartmentObj)];
+
+for(var i = 0; i < empdDataArray.length; i++) {
+	var finalData = empdDataArray[i];
+	console.log(finalData.empName,finalData.designation);
+	//or i can call the displayEmployeeInfo method details
+	//console.log(finalData.displayEmployeeInfo());
+}

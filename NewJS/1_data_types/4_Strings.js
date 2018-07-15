@@ -30,9 +30,10 @@ console.log("New \n Line \n Demo ");
 console.log("Tab \t demo.. \t\t\t tabs.. ");
 
 console.log("Forward Slash\\");
-console.log("Forward Slash\");
+console.log("Forward Slash\"");
 
 //Special characters
+
 /* 	Code	Result		Description
 	\'		  '			Single quote
 	\"		  "			Double quote

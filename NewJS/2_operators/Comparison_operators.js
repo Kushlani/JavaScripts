@@ -35,7 +35,7 @@ console.log (z!=8);
 console.log (z!=7);
 
 // !== Not equal value and not euqal type
-var a = "8";
+var a = "6";
 console.log (a!=="8");
 
 
@@ -54,5 +54,9 @@ var d = 8;
 console.log (d >= 6);
 
 // <= Less than or equal to
-var e = 8;
+var e = 6;
 console.log (e <= 6);
+
+// String equlity
+var str1 = "Hello";
+console.log (str1 === "Hello");

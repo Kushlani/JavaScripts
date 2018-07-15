@@ -19,41 +19,66 @@ function Department(deptName, address, employees) {
 	//forex this.employees = employees;
 
 	this.displayDepartmentInfo = function() {
-		return "**********\n\tDeparment Name : " + this.deptName + ",\n\tDepartment Address : " + this.address + "\n***************";
+		return " Deparment Name : " + this.deptName + "\n Department Address : " + 
+		this.address + " No of Emps : " + this.employees  +  "\n";
 	};
-};
+}
 
-function Employee(empName,designation,empType,department) {
+function Employee(empName,designation,empType,departmentObj) {
 	this.empName = empName;
 	this.designation = designation;
 	this.empType = empType;
-	this.department = department;
+	this.department = departmentObj;
 
 	this.displayEmployeeInfo = function() {
 		return "Emp Name : " + this.empName + ", Designation : " + this.designation +
-		", Emp Type: " + this.empType + ", Deaprtment Name : " + this.department.deptName + ", Department Address : " + this.department.address;
+		", Emp Type: " + this.empType + ", Deaprtment Name : " + this.department.deptName + 
+		", Department Address : " + this.department.address;
 	};
 
-	//Here I am calling the display deparment info method of the deparment object..
+	//Here I am calling the display deparment info method of the department object..
 	this.displayEmpInfoAnotherWay = function() {
 		return "Emp Name : " + this.empName + ", Designation : " + this.designation +
 		", Emp Type: " + this.empType + this.department.displayDepartmentInfo();
-	}
+	};
 }
 
 
-//Creating an object from the object constuctor
-var educationDepartment = new Department("Education Department","Palawatta",400);
+//Creating an object from the Department object constuctor
+var educationDepartmentObj = new Department("Education Department","Pelawatta",400);
 
 //calling a method on the object, since the method returns a value we have created a variable to capture it
-var value = educationDepartment.displayDepartmentInfo();
-console.log(value);
+var returnedvalue = educationDepartmentObj.displayDepartmentInfo();
+console.log(returnedvalue);
+console.log(new Department("Finance","Battaramulla",100).displayDepartmentInfo());
 
-var empArray = [ new Employee("Kushlani","Admin Assistent","Contract",educationDepartment), 
-new Employee("Aluthge","Manager","Fulltime",educationDepartment) ];
+//Creating an Employee object from the Employee constructor function, we are passing the department object
+
+var empOne = new Employee("Kushlani","Admin Assistant","Contract",educationDepartmentObj);
+console.log(empOne.displayEmployeeInfo());
+
+var empArray = [ empOne , 
+new Employee("Aluthge","Manager","Fulltime",educationDepartmentObj) ];
 
 
-for (var x = 0 ; x< empArray.length; x++) {
+var newEmpArray = [];
+for (var y = 0; y < 100; y++) {
+
+	var newEmpObj = new Employee("Employee " + y , "Designation" + y,"Contract",educationDepartmentObj);
+	newEmpArray.push(newEmpObj);
+}
+
+
+console.log(newEmpArray.length);
+console.log(newEmpArray[0].empName);
+
+
+for (var x = 0 ; x < empArray.length; x++) {
 	var emp = empArray[x];
+	console.log(emp.displayEmployeeInfo());
+} 
+
+for (var x = 0 ; x < newEmpArray.length; x++) {
+	var emp = newEmpArray[x];
 	console.log(emp.displayEmployeeInfo());
 } 

@@ -1,5 +1,5 @@
 /**
- * Logical operators are used to determine the logic between variables or values.
+ * Logical operators are used to determine the logics between variables or values.
  * 
  * Operator		Description
 	&&			logical and

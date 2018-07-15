@@ -6,7 +6,7 @@ function Department(deptName, address, employees) {
 	this.deptName = deptName;
 	this.address = address;
 	this.employees = employees;
-};
+}
 
 function Employee(empName,designation,empType,departmentObj) {
 	this.empName = empName;
@@ -23,9 +23,9 @@ function Department(deptName, address, employeesArray) {
 	this.deptName = deptName;
 	this.address = address;
 	this.employees = employeesArray; //Can reach employees from department, stil uni directional
-};
+}
 
-function Employee(empName,designation,empType,departmentArray) {
+function Employee(empName,designation,empType) {
 	this.empName = empName;
 	this.designation = designation;
 	this.empType = empType;

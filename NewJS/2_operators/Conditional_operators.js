@@ -1,6 +1,7 @@
 /**
  * Used to check a condition and return a value accordingly.
- * Same as if else, used with assignments. We dont need to use a variable always to keep the value, we can directly get the value through a console.log.
+ * Same as if else, used with assignments. We dont need to use a variable always to keep the value, we can directly get the value through
+ * a console.log.
  *
  * format: //All of the following is mandatory except the assignment
  *

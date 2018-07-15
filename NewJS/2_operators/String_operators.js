@@ -4,7 +4,7 @@
  * numbers --> sums up
  * strinng --> always get concatenated, even when there is a number
  */
-var x = "Heloo";
+var x = "Hello";
 var y = "There";
 console.log ("Hello" + " " + "There");
 

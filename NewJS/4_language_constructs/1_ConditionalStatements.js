@@ -28,7 +28,7 @@ if(isTodayARainingDay) {
 
 //There is no else, but that is fine as it is optional
 var totalScore = 450;
-if(totalScore < 300) {
+if(totalScore < 460) {
 	console.log("Sri Lanka can win the match...");
 }
 
@@ -80,7 +80,6 @@ if (yearsOfExperience > 10) {
 	position = "Assistant Secretary";
 } else {
 	position = "Management Assistant";
-	
 } 
  
- console.log(position);
+console.log(position);

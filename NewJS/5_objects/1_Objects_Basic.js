@@ -10,7 +10,9 @@
  * 		studdent 
  * 		employee etc..
  *
- *
+ * When you define objects with {} we call them as object lietrals.
+ * (Objects which are created from a object constructor function with new keywords are not called obj literals) 
+ * 
  * Object format = {
  * 		properties:value,
  * 		properties:value,
@@ -33,12 +35,18 @@
  * 	methodName : function(parameters) {
  * 		//Function body....
  * 	}
+ *
+ * Difference between METHODS and FUNCTIONS
+ *  - Methods are always associated with an object
+ *  - Methods usually change the state of an object (state means change the data associated with the object)
+ *  - 
  * 
  */
 
 var student = {
 	firstName: "Kushlani",
 	lastName: "Aluthge",
+	//here address is an object inside the student object
 	address: {
 		streetNumber: 40,
 		road: "Bungarribee",
@@ -52,7 +60,7 @@ var student = {
 	 * Here greeting is a variable (we dont have to define it with var, but in Java you have to do it )
 	 * this method expect a value for greeting variable, greeting variable is called parameter of the method.
 	 *
-	 * PARAMETERS HELP A METHOD TO PROVIDE MULTIPLE BEHAVIOURS 
+	 * PARAMETERS HELP A METHOD TO PROVIDE MULTIPLE BEHAVIOURS,BUT PARAMETERS ARE OPTIONAL TO PASS 
 	 * 
 	 */
 	myNameWithGreeting: function(greeting) {
@@ -72,7 +80,7 @@ var student = {
 };
 
 
-//You can access properties/attributes of an objects
+//You can access properties/attributes of an objects with dot notation or with array style
 console.log(student.firstName);
 console.log(student["firstName"]);
 
@@ -87,7 +95,7 @@ student.fullName();
 student.myNameWithGreeting("Hello");
 student.myNameWithGreeting("Hola");
 student.myNameWithGreeting("Hi");
-student.myNameWithGreeting("Onekkam...");
+student.myNameWithGreeting("Namasthe...");
 //You can still call the method without passing values to the method, but this is not possible in Java
 student.myNameWithGreeting();
 
@@ -108,9 +116,9 @@ var student = {
 		road: "Bungarribee",
 		city: "Blacktown"
 	},
-	
 };
 
+//For in can be used to check properties of an object
 for(var key in student) {
 	console.log(student[key]);
 }
@@ -128,8 +136,6 @@ var studentObject = {
 };
 
 studentObject.myNewProperty = "my new property value....";
-
-
 console.log(studentObject.myNewProperty);
 
 /**
@@ -147,6 +153,7 @@ var studentB = studentA;
 studentB.name = "This is student B name";
 console.log(studentA.name); // This is student B name
 
+//BUT PRIMITIVES ARE NOT 
 var x = 100;
 x += 10;
 var y  = x;
