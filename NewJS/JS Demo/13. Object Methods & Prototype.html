@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Object Prototypes</h1>
+
+<p id="demo">In this lecture, we will cover the Object Prototypes.</p>
+
+<script>
+	//Object methods are actions that can be performed on objects
+	
+	/*You can access a method as follows
+	 methodName: function {code line}
+	 objectName.methodName();
+	*/
+
+	var person = {
+		firstName : "John",
+		lastName : "Doe",
+		age : 30,
+		eyeColor : "blue",
+		fullName : function () {
+		return this.firstName + "" + this.lastName;
+	}
+};
+console.log(person());
+
+//The only way you can add new method is you can added to the constructor when you declare the object
+	
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//All javascript properties and methods are inherited from their prototypes. Basically there is a God Father object called as PROTOTYPE.
+//Objects creating with a object literal or a new object inherit from a prototype called as 'object.prototype'
+
+//Date objects inherit from Date.prototype. Array objects inherit from Array.prototype. Person objects inherit from Person.prototype.
+//The Object.prototype is on the top of the prototype inheritance chain:
+
+//new Date() - Date.prototype
+	
+//You can create your own protype like below;
+	function Person(first, last, age, eyeColor) {
+		this.firstName = first;
+		this.lastName = last;
+		this.age = age;
+		this.eyeColor = eyeColor;
+		//this.nationality = "English";
+		//this.name = function() {
+			//return this.firstName + " " + this.lastName;
+		//}
+	}
+//With a constructor function you can now use the new keyword to create new objects of the same prototype
+	var myFather = new Person("John", "Doe", 60, "black");
+	var myMother = new Person("Sally", "Doe", 60, "brown");
+	
+	myFather.nationality = "English";
+	myFather.name = function() {
+		return this.firstName + " " + this.lastName;
+	};
+//IF YOU NEED TO ASSIGN A PROPERTY TO A PROTOTYPE, GO TO PROTOTYPE DEFINITION AND ADD IT INSIDE THE CONSTRUCTOR FUNCTION.SIMILARLY YOU CAN ADD A METHOD AS WELL.
+
+//THERE IS ANOTHER WAY TO ADD A METHOD OR A PROPERTY TO A PROTOTYPE 
+//object.prototype keyword.property name/method name
+
+//PROTYPES ARE MORE LIKE TO CLASS OBJECTS THAT WE CREATE IN JAVA
+
+	//person.nationality = "English";
+	Person.prototype.nationality = "English";
+	Person.prototype.name = function() {
+		return this.firstName + " " + this.lastName;
+	};
+	
+	console.log("---"+myMother.nationality);
+	console.log("---"+myMother.name());
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Pass by value v/s pass by reference
+
+function changeValue(item){
+		console.log("item = "+item);
+			item = {value: 2};
+		console.log("item = "+item);
+	}
+	
+	/*var x = 1;
+	console.log(x);
+	changeValue(x);
+	console.log(x);*/
+	
+	var x = {value: 1};
+	changeValue(x);
+	console.log(x.value);
+	
+	
+</script>
+
+</body>
+</html>

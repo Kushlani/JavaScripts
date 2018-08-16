@@ -1,8 +1,8 @@
-function Student (name,address,age,marks) {
+function Student (name,address,age,marksObj) {
 	this.name = name;
 	this.address = address;
 	this.age = age;
-	this.marks = marks;
+	this.marksObj = marksObj;
 }
 
 function Subject (name,stream) {
@@ -14,7 +14,6 @@ function Marks (subjectObj,score) {
 	this.subjectObj = subjectObj;
 	this.score = score;
 }
-
 
 var subjectBiology = new Subject ("Biology","Science");
 var subjectPhysics = new Subject ("Physics","Science");
@@ -34,7 +33,6 @@ var stuDetailsDerik = new Student ("Derik","colombo 09",18,marksDerik);
 var stuDetailsMike = new Student ("Mike","colombo 02",18,marksMike);
 var stuDetailsRose = new Student ("Rose","colombo 07",18,marksRose);
 var stuDetailsJean = new Student ("Jean","colombo 01",18,marksJean);
-
 
 var stuDetailsArray = [stuDetailsAnne, stuDetailsDerik, stuDetailsMike, stuDetailsRose, stuDetailsJean];
 
@@ -79,3 +77,5 @@ console.log("Chemistry : " + maxChemistry);
 console.log("Logic : " + maxLogic);
 console.log("Econ : " + maxEcon);
 console.log("English: " + maxEnglish);
+
+

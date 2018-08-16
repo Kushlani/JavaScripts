@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+		
+<h1>DOM - Event handlers</h1>
+
+<p id="demo">In this lecture, we will cover the DOM event handlers</p>
+	
+<!--Nothing was done on the html and Java Script is used to attach a listener to html element-->
+	<button id="clickMe">Click Me</button>
+	
+	<p id="windowTest"></p>
+	
+	<p id="windowTest2"></p>
+
+
+<!--Here the inner event will be executed first and then come to the next-->
+
+	<div onclick>
+		<p onclick>
+			
+		</p>
+	</div>
+
+<script>
+	//addEventListener()
+	// element.addEventListener(event, function, useCapture)
+	//removeEventListener()
+	
+	var elem = document.getElementById('clickMe');
+	elem.addEventListener('click', callMyFunction);
+	elem.addEventListener('click', callMyFunction2);
+	elem.addEventListener('mouseover', callMyFunction3);
+	
+	function callMyFunction() {
+		alert('Hello World');
+	}
+	
+	function callMyFunction2() {
+		console.log('you were alerted');
+		elem.removeEventListener('click', callMyFunction2);
+	}
+	
+	function callMyFunction3() {
+		console.log('Get off me!');
+	}
+	
+
+//Events that happen when the Window is resized
+
+	window.addEventListener("resize", callResize);
+
+	function callResize() {
+		document.getElementById('windowTest').innerHTML = Math.random();
+	}
+
+
+	var count = 15;
+	window.addEventListener("resize", function() { callResize(count); });
+	
+	function callResize(count) {
+		document.getElementById('windowTest2').innerHTML = count++;
+	}
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Self Study Page</title>
+<style>
+table {
+    border-collapse: collapse;
+
+}
+
+table, td, th {
+    border: 1px solid black;
+    padding: 25px;
+
+}
+</style>
+</head>
+<body>
+
+
+<table >
+	<tr>
+		<th id="demo">Name</th>
+		<th id="demo1">Age</th>
+	</tr>
+	<tr>
+		<td id="demo2">Upul</td>
+		<td id="demo3">33</td>
+	</tr>
+	
+</table>
+
+<p id="display"></p>
+
+<button onclick="myFunction()">Click</button>
+<button onclick="myFunction1()">Click Again</button>
+
+<script>
+function myFunction() {
+	document.getElementById("demo").innerHTML = "Age";
+	document.getElementById("demo1").innerHTML = "Name";
+	document.getElementById("demo2").innerHTML = "33";
+	document.getElementById("demo3").innerHTML = "Upul";
+	
+}
+
+function myFunction1() {
+	document.getElementById("demo").innerHTML = "Name";
+	document.getElementById("demo1").innerHTML = "Age";
+	document.getElementById("demo2").innerHTML = "Upul";
+	document.getElementById("demo3").innerHTML = "33";
+	
+}
+</script>
+</body>
+</html>

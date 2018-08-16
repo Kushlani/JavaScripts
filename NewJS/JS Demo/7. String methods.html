@@ -1,0 +1,89 @@
+<!-- Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).
+
+But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<!-- String Length
+The length property returns the length of a string: 
+JavaScript counts positions from zero.
+0 is the first position in a string, 1 is the second, 2 is the third ...-->
+<h2>JavaScript String Methods</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = "How are you?";
+
+document.getElementById("demo").innerHTML = text.length("are");// position 5
+
+
+//The indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string:
+var text = "Please locate where 'locate' occurs!";
+
+document.getElementById("demo").innerHTML = text.indexOf("where");
+
+//The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+var text = "Please locate where 'locate' occurs!";
+
+document.getElementById("demo").innerHTML = text.lastindexOf("locate");
+
+
+//The search() method searches a string for a specified value and returns the position of the match:
+var text = "Please locate where 'locate' occurs!";
+
+document.getElementById("demo").innerHTML = text.search("where");
+
+
+//slice(start, end)
+	var fruits = "Apple, Banana, Kiwi";
+	
+	console.log('slice in action - ' + fruits.slice(7, 13));//"slice in action - Banana"
+	
+	console.log('slice in action with negative param - ' + fruits.slice(-12, -6));//"slice in action with negative param - Banana"
+	
+//substring(start, end)
+	console.log('substring in action - ' + fruits.substring(7, 13));//"substring in action - Banana"
+	
+//substr(start, length)
+	console.log('substr in action - ' + fruits.substr(7, 6));//"substr in action - Banana"
+	
+//Replace contents(remove value, add value)
+	var fruitsUpgrade = fruits.replace('Kiwi', 'Oranges');
+	console.log('replace in action - ' + fruitsUpgrade);//"replace in action - Apple, Banana, Oranges"
+	
+
+//ToLowerCase or ToUpperCase
+ var text = "Find me if you can, me can also be here";  
+	console.log(text.toLowerCase());//"hello world"
+	console.log(text.toUpperCase());//"Hello World"
+	
+	var x = "Hello";
+	var y = "World";
+	var z = x.concat(" ",y);
+	var z1 = x + " " +y;
+	console.log(z, z1);//"Hello World"
+	
+	//Extracting String Characters
+	console.log("test charAt - "+x.charAt(1));//"test charAt - e"
+	console.log("test charCodeAt - "+x.charCodeAt(1));//"test charCodeAt - 101"
+	
+var fruits = "Apple, Banana, Kiwi";
+	var fruitsArray = fruits.split(',');
+	console.log(fruitsArray);//["Apple", " Banana", " Kiwi"]
+	console.log(fruits.split(' '));//["Apple,", "Banana,", "Kiwi"]
+	console.log(fruits.split('a'));//["Apple, B", "n", "n", ", Kiwi"]
+	console.log(fruits.split(''));//["A", "p", "p", "l", "e", ",", " ", "B", "a", "n", "a", "n", "a", ",", " ", "K", "i", "w", "i"]
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!-- 
+HTML events are "things" that happen to HTML elements.
+When Javascript is used in html pages javascript can react on these events
+An HTML event can be something the browser does, or something a user does.
+
+Here are some examples of HTML events:
+
+-An HTML web page has finished loading
+-An HTML input field was changed
+-An HTML button was clicked
+
+Often, when events happen, you may want to do something.
+
+JavaScript lets you execute code when events are detected.
+
+HTML allows event handler attributes, with JavaScript code, to be added to HTML elements.
+
+With single quotes:
+<element event='some JavaScript'>
+
+With double quotes:
+<element event="some JavaScript">
+
+In the following example, an onclick attribute (with code), is added to a button element:
+
+Ex: <p id="demo">In this lecture we will cover Events</p>
+	
+	<button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+	
+In the next example, the code changes the content of its own element (using this.innerHTML):
+
+Ex:	<button onclick="this.innerHTML = Date()"> The time is? </button>
+	
+	There are some other events as well
+	<-- onclick -->
+	<!-- onchange -->
+	<!-- onmouseover -->
+	<!-- onmouseout -->
+	<!-- onkeydown -->
+	<!-- onload ->
+
+
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<p onclick ="this.innerHTML='GOOD JOB!'">Click me.</p>
+
+</body>
+</html>
+
+////////////////////////////////////////////////////////////
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p id="demo"></p> 
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+
+</script>
+
+<button onclick="this.innerHTML = myFunction()">Click Me</button>
+
+
+<p id="demo1"></p> 
+
+
+<button onclick="document.getElementById('demo1').innerHTML = 'Hello World!'"> Click Me </button>
+
+
+
+<p id="demo2"></p> 
+
+
+<button onmouseover="document.getElementById('demo2').innerHTML = 'Hello World!'" onmouseout="document.getElementById('demo2').innerHTML = 'Just World!'"> Try Me </button>
+
+
+</body>
+</html> 

@@ -67,8 +67,6 @@ for (x = 1; x <= 10; x++) {
 
 
 /*
-
-
 var z = [{student}];
 for (var x = 0; x <= (100 -1); x++) {
     z.push();
@@ -78,7 +76,70 @@ for (var y = 0; y <= 100; y++) {
     console.log(student.marks + y);
  }
  }
-   console.log(z);*/
+   console.log(z);
+   */
+
+//Max value
+var points = [40,90, 1, 5, 25, 10];
 
 
-var s1 = {name:Upali,age:40};
+function myArrayMax(arr) {
+    var len = arr.length;
+    var max = -Infinity;
+    while (len--) {
+      if (arr[len] > max) {
+        max = arr[len];
+      }
+    }
+    return max;
+}
+console.log(myArrayMax(points));
+
+//Or Max.math.apply
+var points = [40, 100, 1, 5, 25, 10];
+
+function myArrayMax(arr) {
+    return Math.max.apply(null, arr);
+}
+console.log(myArrayMax(points));
+
+
+
+//Min value
+var points = [40, 100, 3, 5, 25, 10];
+
+function myArrayMin(arr) {
+    var len = arr.length;
+    var min = Infinity;
+    while (len--) {
+      if (arr[len] < min) {
+        min = arr[len];
+      }
+    }
+    return min;
+}
+console.log(myArrayMin(points));
+
+//Or Min.math.apply
+var points = [40, 100, 1, 5, 25, 10];
+
+function myArrayMin(arr) {
+    return Math.min.apply(null, arr);
+}
+console.log(myArrayMin(points));
+
+
+///////////////////////////////////////////////////////////////////
+var studentOne = [
+                {firstName:"Sam",marks:65}, 
+                {firstName:"Anne",marks:42},
+                {firstName:"Paul",marks:87},
+                {firstName:"George",marks:55},
+                {firstName:"Luara",marks:73},
+                {firstName:"Alex",marks:92}
+];
+
+studentOne.sort(function(a, b){
+  return a.marks - b.marks}
+  );
+console.log(studentOne);

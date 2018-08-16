@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<body>
+ 
+<h1>Numbers</h1>
+
+<p id="demo">In this lecture we will cover Numbers.</p>
+	
+<script>
+
+//JavaScript has only one type of number. Numbers can be written with or without decimals.
+
+	var x = 34.00; //A number with decimals
+	x = 34; //A number without decimals
+	
+	x = 123e5; //12300000
+	x = 123e-5; // 0.00123
+	
+	var x1 = 999999999999999; //15 times 9
+	var x2 = 9999999999999999; //16 times 9
+	console.log(x1, x2);//999999999999999, 10000000000000000
+	
+	var x3 = (0.2*10 + 0.1*10)/10;
+	console.log(x3); //0.3
+	
+	
+	//Binary - 2
+	//Hexadecimal - 16
+	//Octal - 8
+	//Decimal - 10
+	var x4 = 128;
+	console.log('Hexadecimal value is - '+x4.toString(16));//"Hexadecimal value is - 80"
+	console.log('Ocatl value is - '+x4.toString(8));//"Ocatl value is - 200"
+	console.log('Binary value is - '+x4.toString(2));//"Binary value is - 10000000"
+	
+	//255
+	var hexa = 0xFF;
+	console.log('Decimal value is - '+ hexa.toString(10));//"Decimal value is - 255"
+
+	
+	//Infinity
+	var x5 = 2/0;//or -2/0
+	console.log('Infinity test - '+ x5);//"Infinity test - -Infinity"
+	console.log(typeof Infinity);//NaN
+
+	
+	//NaN - Not a Number
+	var x6 = 100/"Hundred";
+	console.log(x6);//"number"
+	console.log(x6, isNaN(x6));//true
+
+	
+	var x7 = 100/"100";
+	console.log(x7);//1
+	console.log(x7, isNaN(x7));//false
+	
+	var x8 = NaN;
+	var x9 = "5";
+	var x10 = x8 + x9;
+	console.log(x10);//"NaN5"
+
+	
+	console.log(typeof NaN);//"number"
+	
+	//Numbers can be Objects
+	var x11 = new Number(10);
+	var x12 = 10;
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+//NUMBER METHODS	
+
+//toString()
+	var x = 123;
+	console.log(x.toString());//"123"
+	
+//toExponential()
+	var y = 9.656;
+	console.log(y.toExponential()); //9.656e+0
+	console.log(y.toExponential(2));//9.66e+0
+	console.log(y.toExponential(4));//9.6560e+0
+	
+//toFixed()
+	console.log(y.toFixed(0));//10
+	console.log(y.toFixed(2));//9.66
+	
+//toPrecision()
+	console.log(y.toPrecision());//9.656
+	console.log(y.toPrecision(2));//9.7
+	console.log(y.toPrecision(4));//9.656
+	
+//valueOf()
+	console.log(x.valueOf(), (123).valueOf(), (100+23).valueOf());//123,123,123
+	
+//Converting variables to Numbers
+//Number()
+	var result = true;
+	console.log(Number(result));//1
+	console.log(Number("10"));//10
+	console.log(Number("10 years"));//NaN
+	console.log(Number("10 20"));//NaN
+	
+//parseInt()
+	var result = true;
+	console.log(parseInt(result));//NaN
+	console.log(parseInt("10"));//10
+	console.log(parseInt("10 years"));//10
+	console.log(parseInt("10 20"));//10
+	console.log(parseInt("years 10"));//NaN
+	
+//parseFloat()
+	var result = true;
+	console.log(parseFloat(result));//NaN
+	console.log(parseFloat("10"));//10
+	console.log(parseFloat("10.33"));//10.33
+	console.log(parseFloat("10 years"));//10
+	console.log(parseFloat("10 20"));//10
+	console.log(parseFloat("years 10"));//NaN
+	
+//Number Properties
+	console.log('max value of JS number = '+Number.MAX_VALUE);//"max value of JS number = 1.7976931348623157e+308"
+	console.log('min value of JS number = '+Number.MIN_VALUE);//"min value of JS number = 5e-324"
+	console.log('NEGATIVE_INFINITY value of JS number = '+Number.NEGATIVE_INFINITY);//"NEGATIVE_INFINITY value of JS number = -Infinity"
+	console.log('POSITIVE_INFINITY value of JS number = '+Number.POSITIVE_INFINITY);//"POSITIVE_INFINITY value of JS number = Infinity"
+	console.log('NaN value of JS number = '+Number.NaN);//"NaN value of JS number = NaN"
+	console.log("");//""
+	
+////////////////////////////////////////////////////
+//WHEN YOU ADD A FLOATING NUM TO VARIABLES AND GET THE SUM OF IT YOU HAVE TO FOLLOW THE GIVEN METHOD
+ var x = 0.1;
+ var y = 0.2;
+ var z = x + y;
+
+ console.log((x * 10 + y * 10) / 10);//z will be 0.3
+</script>
+
+</body>
+</html>
+
+
+
+
+
+

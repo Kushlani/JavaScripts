@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Object Properties</h1>
+
+<p id="demo">In this lecture, we will cover the Object Properties.</p>
+
+<script>
+	
+	var person = {
+		firstName: "John",
+		age: 30,
+		lastName: "Doe",
+		eyeColor: 'blue'
+	};
+	
+	
+	//Properties can Add, change or delete
+	
+	/*Three different ways of accessing the properties are as follows
+	
+	1 - objectName.property //person.firstName
+	
+	2 - objectName['property'] //person['firstName']
+	
+	3 - objectName[expression] // var x = "age"; person[x]*/
+
+	//Expression is an assign a value
+	var x = "age";
+	console.log(person.firstName);
+	console.log(person['lastName']);
+	console.log(person[x]);
+	
+	/* Also via using a 'for in' loop you can access object properties... 
+	for (variable in object){
+			code to be executed
+	}
+	variable is nothing but properties that are belonging to a particular object
+	*/
+	
+	var text = "";
+	for (var y in person){// y stands for the keys(properties<!DOCTYPE html>
+
+////////////////////////////////////////////////////////////////////////////
+
+<h1>Loops - For Loop</h1>
+
+<p id="demo">In this lecture we will cover the for loops.</p>
+
+<script>
+
+	//for
+	//for/in
+	//while
+	//do/while
+	
+	/*
+	for(statement1; statment2; statement3){
+		code block to be executed
+	}
+	*/
+	//var i = 1;
+	for(i=1; i<=10; i++){
+		console.log(i);
+	}
+	
+	var cars = ['BMW', 'Merc', 'Ford', 'Honda']
+	for(i=0, len = cars.length ; i<len; i++){
+		console.log(cars[i]);
+	}
+	
+	//i--
+	//i+10
+	//i*2 + 10
+	
+	var person = {fname: "John", lname:"Doe", age: 25, mname: "Smith"};
+	
+	for(x in person){
+		console.log(x+" = "+person[x]);
+	}
+	
+</script>
+
+</body>
+</html>
+) in the person object
+		text += person[y];
+		text += " ";
+	}
+	
+	console.log(text);
+	
+
+	//Way of adding a new property
+	person.nationality = "English";
+	
+	console.log(person.nationality);
+	
+	//delete a property
+	delete person.age;
+	
+	console.log(person);
+	
+	
+</script>
+
+</body>
+</html>

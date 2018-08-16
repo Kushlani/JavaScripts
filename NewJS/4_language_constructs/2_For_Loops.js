@@ -85,7 +85,7 @@ for (var x = 1; x <= 10; x++) {
 
 //factorial of 10
 var multiply = 1;
-for (y =1; y <= 10; y++) {
+for (var y =1; y <= 10; y++) {
   multiply *= y;
   console.log (multiply);
 }
@@ -93,7 +93,7 @@ for (y =1; y <= 10; y++) {
 
 //all the factorial values of 1 to 10
 
-for (f =1; f <= 10; f++) {
+for (var f =1; f <= 10; f++) {
   var factorial = 1;
     for (g = 1; g <= f; g++) {
        factorial *= g;

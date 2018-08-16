@@ -1,5 +1,6 @@
 /**
  * Used to check a condition and return a value accordingly.
+ * WE CALL THIS A TERNARY OPERATOR AS WELL
  * Same as if else, used with assignments. We dont need to use a variable always to keep the value, we can directly get the value through
  * a console.log.
  *

@@ -10,7 +10,7 @@ var studentObj = {
 	age: 55
 };
 //However it is hard to create more objects like this, it is easier if there is a way to create objects quickly 
-//we use classes in other PLs for that in in JS we use object constuctor functions
+//we use classes in other PLs for that in JS we use object constuctor functions
 
 
 /**

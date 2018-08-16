@@ -1,4 +1,4 @@
-/**
+/**In simple words we can say comparison operators are used to compare the two sides
  * Comparison operators are used in logical statements to determine equality or difference between variables or values.
  * ALWAYS RETURNS A BOOLEAN VALUE
  *

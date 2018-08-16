@@ -1,7 +1,7 @@
 /**
  * Data are information/details.
  * 
- * Data types are different kinds of data. Data structure is who keeps/stores that data for updating and organizing purposes.(ex: array and object)
+ * Data types are different kinds of data dat can be stored in a variable. Data structure is who keeps/stores that data for updating and organizing purposes.(ex: array and object)
  * 
  * In programming, data type is an important concept.
 

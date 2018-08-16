@@ -116,3 +116,14 @@ console.log("Max score for Chemestry is : " + maxChemistry);
 console.log("Max score for Physics is : " + maxPhysics);
 console.log("Max score for Econ is : " + maxEcon);
 console.log("Max score for Accounting is : " + maxAccounting);
+
+
+
+var one = new Student ("Anne","Colombo 01", 17);
+//var one = new Marks (subjectMaths, 75);
+if(one instanceof Student) {
+    console.log(Student);
+}
+    else if(one instanceof Marks){
+console.log(Marks);
+}

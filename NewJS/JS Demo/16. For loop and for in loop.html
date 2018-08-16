@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Loops - For Loop</h1>
+
+<p id="demo">In this lecture we will cover the for loops.</p>
+
+<p id = "demo1"></p>
+
+<script>
+
+	//for
+	//for/in
+	//while
+	//do/while
+	
+	/*
+	for(statement1; statment2; statement3){
+		code block to be executed
+	}
+	*/
+	//var i = 1;
+	for(i=1; i<=10; i++){
+		console.log(i);
+	}
+	
+	var cars = ['BMW', 'Merc', 'Ford', 'Honda'];
+	for(i=0, len = cars.length ; i<len; i++){
+		console.log(cars[i]);
+	}
+	
+	//i--
+	//i+10
+	//i*2 + 10
+	
+
+	var person = {fname: "John", lname:"Doe", mname: "Smith", age: 25};
+	
+
+	for(var x in person){
+	 //console.log(x + " = " + person[x]);
+	 document.getElementById("demo1").innerHTML += " " + person[x].age;
+	}
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Self Study Page</title>
+</head>
+<body>
+
+<h2>Please input a number between 10 and 15</h2>
+
+<form>
+Number : <input id="demo" type="text" name="number">
+</form>
+
+<p id="display"></p>
+
+<button onclick="myFunction()">Click</button>
+
+<script>
+function myFunction() {
+	var message = document.getElementById("display");
+	message.innerHTML = "";
+
+	var x = document.getElementById("demo").value;
+
+	try {
+		if(x === "") throw "empty";
+		if(isNaN(x)) throw "not a number";
+		
+		if(x < 10) throw "too low";
+		if(x > 15) throw "too high";
+		if(x >= 10 && x <=15) throw "PERFECT!";
+	}
+	catch(err) {
+		message.innerHTML = "The number u have entered is " + err;
+	}
+}
+</script>
+</body>
+</html>

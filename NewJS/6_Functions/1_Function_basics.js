@@ -1,5 +1,5 @@
 /**
- * Function is a grouping of a block of codes / or A JavaScript function is a block of code designed to perform a particular task.
+ * Function is a grouping of a block of codes / or A JavaScript function is a block of code designed to perform a particular task/action.
  *
  * format 
  *
@@ -71,7 +71,7 @@ var thisIsAFunctionExpression = function(x,y) {
 console.log(thisIsAFunctionExpression(10,20));
 
 /**
- * Since Function is a Object in JS functions can be passed to another function
+ * Since Function is an Object in JS functions can be passed to another function
  * This is a main feature of functional programming. (Functional programming is a programming pradigm)
  * Java doesnt exactly support this.
  * 

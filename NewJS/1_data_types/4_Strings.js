@@ -1,4 +1,5 @@
 /**
+ *  JS STRINGS IS USED TO STORE AND MANIPULATE TEXTS
  *	IN JS YOU CAN USE BOTH SINGLE QUOTE AND DOWUBLE QUOTE TO INDICATE STRING LITERALS./VALUES
  *	BUT IN OTHER PROGRAMMING LANAGUAGES WE USE DOUBLE QUOTE
  *
@@ -86,10 +87,9 @@ console.log(x==y);// is true because x and y have equal values
 //But in here, equal strings are not equal, because the === operator expects equality in both type and value.
 var x = "John";              // x is a string
 var y = new String("John");  // y is an object
-console.log(x===y);// is false because x and y are different objects
+console.log(x===y);// is false because x and y are different types
 
-//Objects cannot be compared:
 var x = new String("John");
 var y = new String("John");
-console.log(x==y);//  is false because x and y are different objects
+console.log(x==y);//  is false because x and y are different objects.
 console.log(x===y);//  is false because x and y are different objects

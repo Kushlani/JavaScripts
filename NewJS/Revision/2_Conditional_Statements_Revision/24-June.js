@@ -13,3 +13,16 @@ if (yearsOfExperience > 10) {
 } 
  
  console.log(position);
+
+
+ var moneyAtHand = 30;
+if (moneyAtHand < 100) {
+	console.log("Can buy 3 mangoes");
+} else if (moneyAtHand < 60) {
+	console.log("Can buy 2 mangoes");
+} else if (moneyAtHand <= 30) {
+	console.log("Can buy 1 mango");
+} else {
+	moneyAtHand = "Cannot buy mango";
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vending Machine</title>
+</head>
+
+<body>
+    <script>
+
+    function buyFood() {
+
+        var insertedAmount = "";
+        var leastItemPrice = leastItem();
+
+        insertedAmount = document.getElementById('num').value;
+        console.log("amount inserted : " + insertedAmount + ", least Price : " +leastItemPrice);
+
+        var returnedValue = insertCoin(insertedAmount,leastItemPrice);
+        console.log("Value returned " + returnedValue);
+
+        document.getElementById("demo").innerHTML = returnedValue;
+    }
+
+    function insertCoin(insertedAmount, leastItemPrice) {
+        if (insertedAmount >= leastItemPrice) {
+            return "You have inserted " + insertedAmount + "$";
+        } 
+        return "Money is not suficient to buy any food...., please try again...";
+    }
+
+    function item(name, code, price) {
+        this.name = name;
+        this.code = code;
+        this.price$ = price;
+    }
+
+    function leastItem() {
+
+        var coke = new item("coke", "1", 2);
+        var pepsi = new item("pepsi", "2", 2);
+        var iceCoffee = new item("iceCoffee", "3", 3);
+        var pringles = new item("pringles", "4", 2.50);
+        var tipiTip = new item("tipiTip", "5", 1);
+        var itemArray = [coke, pepsi, iceCoffee, pringles, tipiTip];
+
+        itemArray.sort(function(a, b) { return b.price$ - a.price$; });
+        
+        return (itemArray[itemArray.length - 1].price$);
+    }
+    </script>
+    <h1> Try to buy food from a Vending Machine!!!</h1>
+    <input id="num" type="text" name="insert amount"></input>
+    <br>
+    <br>
+    <button onclick="buyFood()">Insert Coin</button>
+    <p id="demo">Hii</p>
+</body>
+
+</html>

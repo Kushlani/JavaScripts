@@ -1,0 +1,89 @@
+<!-- Javascript has function scopes, which means the scope changes inside the functions
+JS variables defined in a function are local to that function.
+Local variable has local scope and they can only be accessed within the function
+
+
+function myFunction() {
+    var name = "Kush";
+    console.log("From inside the function " + name);
+}
+myFunction(); // we can get the result as "From inside the function Kush" in here
+
+/////////////////////////////////////////////////////////////////////////////////////
+function myFunction() {
+    var name = "Kush";
+    }
+myFunction(); 
+console.log("From inside the function " + name);// we cannot get the result in here, it shows the name is not defined
+
+////////////////////////////////////////////////////////////////////////////////////
+if we make another function with similar variable name, it doesnt make any harm beause the local scope is limited within the 
+given function's parentheses.
+
+function myFunction1() {
+    var name = "Kush";
+    console.log("From inside the function " + name);
+
+    }
+myFunction(); 
+
+function myFunction2() {
+    var name = "John";
+    console.log("From inside the function " + name);
+    }
+myFunction(); 
+
+//////////////////////////////////////////////////////////////////////////////////
+Global variable
+
+-> In here we remove the var of the inside variables bcz if we put them inside, the variables become the principles. Then there is no value for the global variable. 
+var name;
+function myFunction1() {
+    name = "Kush";
+    console.log("From inside the function " + name);
+
+    }
+myFunction(); 
+
+function myFunction2() {
+    name = "John";
+    console.log("From inside the function " + name);
+    }
+
+myFunction1(); 
+myFunction2(); 
+console.log(name); 
+
+///////////////////////////////////////////////////////////////////
+
+When you access the global variable in html you can use the window to access that. You should only creates global variables when you explicitly need them. 
+
+var name;
+function myFunction1() {
+    name = "Kush";
+    console.log("From inside the function " + name);
+
+    }
+myFunction(); 
+
+function myFunction2() {
+    name = "John";
+    console.log("From inside the function " + name);
+    }
+
+myFunction1(); 
+myFunction2(); 
+console.log(name); 
+
+//Accessing Javascript global variables to update HTML using window.
+document.getElementById('globalScope').innerHTML = 'I can display' +window.name
+
+///////////////////////////////////////////////////////////////
+
+Life time of a js variable....
+	Local variables are deleted when the function is completed
+	Global variables are deleted when you close the html page
+
+//////////////////////////////////////////////////////////////
+When you give parameters to a function bydefault they become a local scope variable. Which means we cannot access the parameters outside the scope of a method
+ -->

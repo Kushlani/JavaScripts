@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+		
+<h1>Type Conversion - 1</h1>
+
+<p id="demo">In this lecture, we will cover type conversion.</p>
+
+<script>
+	// string, number, boolean, object and function
+	// Object, Date and Array
+	// null and undefined
+	
+	console.log("John - "+typeof "John");
+	console.log("3.14 - "+typeof 3.14);
+	console.log("NaN - "+typeof NaN);
+	console.log("false - "+typeof false);
+	console.log("array - "+typeof [1,2,3,4]);
+	console.log("object - "+typeof {name: "John Doe", age: 25});
+	console.log("Date - "+typeof new Date('12/31/2016'));
+	console.log("function - "+typeof function() {});
+	console.log("myHouse - "+typeof myHouse);
+	console.log("null - "+typeof null);
+	
+	//typeof = operator (+, - * /);
+	
+	//Constructor
+	console.log("John - "+"John".constructor);
+	console.log("3.14 - "+ 3.14.constructor);
+	console.log("Array - "+ [1,2,3,4].constructor);
+	
+	function isArray(myArray){
+		return myArray.constructor.toString().indexOf("Array") > -1
+	}
+	
+	console.log(isArray(3.14));
+	console.log(isArray([1,2,3,4]));
+	
+</script>
+
+</body>
+</html>
+
+///////////////////////////////////////////////////////////////////////////
+<h1>Type Conversion - 2</h1>
+
+<p id="demo">In this lecture, we will cover the Type Conversion.</p>
+
+<script>
+	
+	//toString(), String()
+	console.log('--------- Number to String ---------- ');
+	var x = 10;
+	console.log(String(x)+" , "+ x.toString());
+	console.log(String(123)+" , "+ (123).toString());
+	console.log(String(120+3)+" , "+ (120+3).toString());
+	
+	//Booleans to String
+	console.log('--------- Booleans to String ---------- ');
+	console.log(String(false));
+	console.log(true.toString());
+	
+	//Date to String
+	console.log('--------- Date to String ---------- ');
+	console.log(String(new Date("1/1/2017")));
+	console.log(new Date("1/2/2017").toString());
+	
+	//String to Number
+	console.log('--------- String to Number ---------- ');
+	console.log(Number("3.14"));
+	console.log(Number(" "));
+	console.log(Number(""));
+	console.log(Number("10 20"));
+	
+	var y = 15;
+	var x = + y;
+	console.log(x);
+	
+	y = "John";
+	x = + y;
+	console.log(x);
+	
+	//Booleans to Number
+	console.log('--------- Booleans to Number ---------- ');
+	console.log(Number(false));
+	console.log(Number(true));
+	
+	//Date to Number
+	console.log('--------- Date to Number ---------- ');
+	console.log(Number(new Date('1/1/2017')));
+	
+	//Automatic Type Conversions
+	console.log('--------- Automatic Type Conversions ---------- ');
+	
+	console.log(5 + null);
+	console.log("5" + null);
+	console.log("5" + 2);
+	console.log("5" - 2);
+	console.log("5" * "2");
+	
+</script>

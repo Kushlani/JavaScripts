@@ -1,4 +1,3 @@
-var todayIsARainyDay = true;
 if (todayIsARainyDay) {
 	console.log("Can Play"); 
 } else {

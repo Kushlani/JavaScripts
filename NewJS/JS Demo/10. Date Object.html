@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Date</h1>
+
+<p id="dateField"> Date object</p>
+
+<p id="dateField"></p>
+<p id="dateField1"></p>
+<p id="dateField2"></p>
+<p id="dateField3"></p>
+<p id="dateField4"></p>
+	
+<script>
+	document.getElementById('dateField').innerHTML = new Date();
+	document.getElementById('dateField1').innerHTML = new Date(1481346000000);
+	document.getElementById('dateField2').innerHTML = new Date('12/31/2016'); //mm/dd/yyyy
+	document.getElementById('dateField3').innerHTML = new Date(2016,11,31,12,30);
+	//years, months, days, hours, minutes, seconds and milliseconds.
+	
+	var d = new Date();
+	document.getElementById('dateField4').innerHTML = d.toDateString();
+
+
+//DATE FORMATS
+
+	//YYYY-MM-DD
+	console.log('------- ISO Dates ---------');
+	var d = new Date("2016-03-25");
+	console.log(d.toString());
+	d = new Date("2016-03");
+	console.log(d.toString());
+	d = new Date("2016");
+	console.log(d.toString());
+	d = new Date("2016-03-25T12:30:44");
+	console.log(d.toString());
+	
+	//Short Date - mm/dd/yyyy
+	console.log('------- Short Dates ---------');
+	d = new Date("03/25/2016");
+	console.log(d.toString());
+	
+	//Long Dates - Mar 25 2016
+	console.log('------- Long Dates ---------');
+	d = new Date("Mar 25 2016");
+	console.log(d.toString());
+	d = new Date("25 Mar 2016");
+	console.log(d.toString());
+	d = new Date("25 March 2016");
+	console.log(d.toString());
+	d = new Date("25 MARCH 2016");
+	console.log(d.toString());
+	d = new Date("25, MARCH, 2016");
+	console.log(d.toString());
+	
+	//Full Dates - Thu Mar 24 2016 20:00:00 GMT-0400 (EDT)
+	console.log('------- Full Dates ---------');
+	d = new Date("Sat Mar 25 2016 00:00:00 GMT-0400 (EDT)");
+	console.log(d.toString());
+	
+
+//DATE METHODS
+
+var d = new Date();
+	console.log(d.toString());
+	
+	//Get methods
+	console.log("Date - "+d.getDate());
+	console.log("Day - "+d.getDay());
+	console.log("year - "+d.getFullYear());
+	console.log("hours - "+d.getHours());
+	console.log("Time - "+d.getTime());
+	
+	//Set Methods
+	
+	console.log('--------Setter methods ----------');
+	d.setDate(31);
+	console.log("Date - "+d.getDate());
+	
+	d.setYear(2034);
+	console.log("year - "+d.getFullYear());
+
+	d.setTime(1480972992395);
+	console.log("Time - "+d.toString());
+	
+	//Parsing
+	var msec = Date.parse('Dec 31, 2016');
+	console.log(msec);
+	d.setTime(msec);
+	console.log("Time - "+d.toString());
+	
+	//Compare Dates
+	var today, someday;
+	today = new Date('12/12/2021');
+	someday = new Date();
+	someday.setFullYear(2020, 0, 10);
+	
+	if(someday > today){
+		console.log("Today is before January the 10th, 2020");
+	} else {
+		console.log("Today is after January the 10th, 2020");
+	}
+	
+</script>
+
+</body>
+</html>

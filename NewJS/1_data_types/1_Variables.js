@@ -57,5 +57,5 @@ function testFunction() {
 }
 testFunction();
 
-console.log("THIS IS OUTSIDE FUNTIONC : " + insideFunction); //
+console.log("THIS IS OUTSIDE FUNCTION : " + insideFunction); //
 

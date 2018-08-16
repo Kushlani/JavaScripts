@@ -1,4 +1,4 @@
-/**
+/* Logical Logical operators are usually used with comparison operators. If we want to compare more than one condition we can use logical operators.
  * Logical operators are used to determine the logics between variables or values.
  * 
  * Operator		Description

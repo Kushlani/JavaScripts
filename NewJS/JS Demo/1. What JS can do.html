@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javademo</title>
+
+</head>
+<body>
+<h1>What Javascript can do?</h1>
+
+<!--js can change the element of html.-->
+<p id ="demo"> Javascript can change HTML content</p>
+
+<button onclick="document.getElementById('demo').innerHTML = 'HTML updated'">Click me to make changes</button> <!--Whenever a button gets clicked it is an event. Whenever an event happens we can handle it in javascript.We can use to handle it onclick attribute in html.--> 
+
+<hr>
+
+<!--js can change the attribute of html tag.-->
+<button onclick="document.getElementById('image').src='Pics/eg_bulbon.gif'">Turn on</button>
+
+<img id="image" src="eg_bulboff.gif">
+
+<button onclick="document.getElementById('image').src='Pics/eg_bulboff.gif'">Turn Off</button>
+
+<hr>
+
+<!--We can hide elements in html using js-->
+
+<p id ="hide"> Im going to hide</p>
+
+<button onclick="document.getElementById('hide').style.display = 'none'">Hide me</button>
+<button onclick="document.getElementById('hide').style.display = 'block'">Show me</button>
+
+</body>
+</html>

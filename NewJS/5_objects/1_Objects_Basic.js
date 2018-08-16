@@ -32,6 +32,7 @@
  * 'This' is a keyword(reserved word in JS) used to refer object properties
  *
  * 	Methods are functions defined within objects
+ * 	Or in other words methods are nothing just functions which belongs to a particular object
  * 	methodName : function(parameters) {
  * 		//Function body....
  * 	}
@@ -58,7 +59,7 @@ var student = {
 	/**
 	 * This method accept a variable from outside
 	 * Here greeting is a variable (we dont have to define it with var, but in Java you have to do it )
-	 * this method expect a value for greeting variable, greeting variable is called parameter of the method.
+	 * this method expects a value for greeting variable, greeting variable is called parameter of the method.
 	 *
 	 * PARAMETERS HELP A METHOD TO PROVIDE MULTIPLE BEHAVIOURS,BUT PARAMETERS ARE OPTIONAL TO PASS 
 	 * 

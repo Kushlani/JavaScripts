@@ -25,16 +25,10 @@ var studentObj = {
 	lastName: "Sumudumali",
 	address: "Sydney",
 	age: 34,
-	subjects: [{
-		subjectName: "Maths",
-		marks: 75
-	}, {
-		subjectName: "Physics",
-		marks: 85
-	}, {
-		subjectName: "Science",
-		marks: 95
-	}]
+	subjects: [{subjectName: "Maths", marks: 75}, 
+	{subjectName: "Physics", marks: 85},
+	{subjectName: "Science",marks: 95
+}]
 };
 
 //Identical Json for this object would be
