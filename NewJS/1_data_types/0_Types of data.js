@@ -1,7 +1,8 @@
 /**
  * Data are information/details.
  * 
- * Data types are different kinds of data dat can be stored in a variable. Data structure is who keeps/stores that data for updating and organizing purposes.(ex: array and object)
+ * Data types are different kinds of data that can be stored in a variable. Data structure is who keeps/stores that data for 
+ * updating and organizing purposes.(ex: array and object)
  * 
  * In programming, data type is an important concept.
 
@@ -13,7 +14,7 @@ Primitive data types are basic data
 ex: What is your name?
 	What is your age? 
 	We only get one value from these type of questions and those denote basic types of information. Incontrast with primitive data 
-	types objects have complex data types.
+	types, objects have complex data types.
 
 
 

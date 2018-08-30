@@ -24,7 +24,7 @@ function cookSomeLunch() {
 
 /**
  * This could be considered as a module, (So does the other cutting vegi functions)
- * Modules purpose is to share the same functionality WITHIN in the programms.
+ * Modules purpose is to share the same functionality WITHIN the programmes.
  */
 function cutVegitables(v) {
 	console.log("I am cutting " + v);

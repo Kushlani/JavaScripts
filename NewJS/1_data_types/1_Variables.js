@@ -1,10 +1,10 @@
 "use strictly"
 
 /**
- * A variables is used to keep a value in the memory. 
- *
- * 
- * Variable lifecycle
+ * Is a memory location which is used to store a value temporary or A variable is used to keep a value in the memory. 
+		- Like a holder 
+
+ * * Variable lifecycle
  *
  * 1.) Define a variable, definition --> var x; //This is the variable creation
  * 2.) Initilization. Assign a value x = 10;

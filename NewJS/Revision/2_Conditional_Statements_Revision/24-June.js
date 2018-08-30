@@ -26,3 +26,17 @@ if (moneyAtHand < 100) {
 	moneyAtHand = "Cannot buy mango";
 }
 
+//if statements
+var mangoes = "";
+var moneyAtHand = 30;
+if (moneyAtHand < 100) {
+	mangoes ="Can buy 3 mangoes";
+} else if (moneyAtHand < 60) {
+	mangoes ="Can buy 2 mangoes";
+} else if (moneyAtHand <= 30) {
+	mangoes = "Can buy 1 mango";
+} else {
+	mangoes = "Cannot buy mango";
+}
+console.log(mangoes);
+

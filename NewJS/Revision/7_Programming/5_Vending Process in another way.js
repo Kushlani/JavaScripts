@@ -8,7 +8,7 @@ function buyFood() {
     /*selectItem();
     collectItem();
     getBalance();*/
-    
+
 }
 
 function insertCoin(insertedAmount, leastItemPrice) {
@@ -34,10 +34,7 @@ function leastItem() {
 
     var itemArray = [coke, pepsi, iceCoffee, pringles, tipiTip];
 
-    for (var i = 0; i < itemArray.length; i++) {
-        itemArray.sort(function(a, b) { return b.price$ - a.price$; });
-        console.log(itemArray);
-    }
+    itemArray.sort(function(a, b) { return b.price$ - a.price$; });
     return (itemArray[itemArray.length - 1].price$);
 }
 
