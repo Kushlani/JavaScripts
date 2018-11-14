@@ -7,7 +7,7 @@
  * 			behaviour,action --> methods,operations, functions
  *
  * Objects represent real world data structures like
- * 		studdent 
+ * 		student 
  * 		employee etc..
  *
  * When you define objects with {} we call them as object lietrals.
@@ -22,7 +22,8 @@
  *
  * Objects are hold by object reference variable, objects are mutable,
  * OBJECT REFERENCE VARIABLES CONTAINS THE MEMEORY ADDRESS OF THE ACTUAL OBJECT 
- * SO WHENEVER YOU ASSIGN AN OBJECT REFERENCE VARIABLE TO ANOTHER OBJECT REFERENEC VARIABLE THE REAL LOCATION OF THE OBJECT GET COPIED
+ * SO WHENEVER YOU ASSIGN AN OBJECT REFERENCE VARIABLE TO ANOTHER OBJECT REFERENEC VARIABLE THE REAL LOCATION OF THE OBJECT 
+ * GET COPIED
  * SO WHATEVER CHANGES YOU MADE ON EITHER OF THE OBEJCT REFERENCE VARIABLES AFFECT THE SAME OBJECT
  *
  * var objectReferenceVariable = <Object Definition>

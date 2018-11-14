@@ -1,0 +1,34 @@
+When JS is running on the browser
+	Window object is global object
+		All the global objects are part/properties of Window object
+		even the document object
+		all the global objects can be accessed as follows
+			window.document (as all global objects are part of windows object)
+			document <-- Since it is a global object
+				window.document.getElementById()
+				document.getElementById()
+
+
+	JavaScripts in browser Global Context is Windo object
+
+
+
+Demo
+	window.closed -->returns a boolean value
+	window.open --> returns a reference to the window which got opened
+	windo.close
+	
+	Console --> Al
+		assert
+		clear
+		count
+		error
+		All the properties
+	Document - Some commonly used methods
+	DOM -> events, event listners
+	History 
+	Navigator -> some methods
+	Storage 
+ 
+
+

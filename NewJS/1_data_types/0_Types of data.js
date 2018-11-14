@@ -1,4 +1,4 @@
-/**
+/*
  * Data are information/details.
  * 
  * Data types are different kinds of data that can be stored in a variable. Data structure is who keeps/stores that data for 

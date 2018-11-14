@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Console</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		//https://www.w3schools.com/jsref/obj_console.asp
+		//
+		//
+		//Assertions are used for testing, things which should be true in order to successfully running the programm
+		//So we are testing them, and if they are not ture we are logging them
+		console.assert(10>100,"Message is displayed if the first value is false....");
+
+		//when testing
+		var electricity = false;
+		console.assert(electricity,"Apparently there is no electricity ....");
+		console.log( electricity == false ? "Apparently there is no electricity ...." : "");
+
+		if (!electricity) {
+			console.log("Apprently there is no electricity...");
+		}		
+
+
+
+
+		console.log("Before calling console group....")
+		console.group("TestGroup");
+		console.log("Line");
+		console.log("Line");
+		console.log("Line");
+		console.log("Line");
+		console.log("Line");
+		console.log("Line");
+		console.groupEnd("TestGroup");
+		console.log("After the group");
+
+	</script>
+
+</body>
+</html>

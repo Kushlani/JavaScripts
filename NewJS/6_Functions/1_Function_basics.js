@@ -34,6 +34,8 @@ console.log(passingValueToParamDemo(10,20,30));
 console.log(passingValueToParamDemo(10,20));
 console.log(passingValueToParamDemo(10));
 console.log(passingValueToParamDemo());
+console.log(passingValueToParamDemo(null,10));
+console.log(passingValueToParamDemo(null,null,20));
 
 
 /**

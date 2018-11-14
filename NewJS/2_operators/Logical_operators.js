@@ -28,3 +28,8 @@ var d = 5;
 console.log (!(c == 7 || d == 3));
 console.log (!(c > 7 || d > 3));
 
+var todayIsSunneyDay = true;
+console.log(" Sunny Day : " + todayIsSunneyDay);
+console.log("With Not : " + !todayIsSunneyDay);
+
+

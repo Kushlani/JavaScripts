@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window Object Demos</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var newWindow;
+
+		function openWindow() {
+			console.log("Opening a window");
+		    newWindow = window.open("", "Window Title", "width=600, height=200, top=500",false);
+		}
+		
+		function openWindowFacebook() {
+			console.log("Opening Facebook");
+		    window.open("http://www.facebook.com","Window Title","width=600, height=200");
+		}
+		
+		function closeWindow() {
+			console.log("Closing Window");
+			newWindow.close();
+		}
+
+		function isCloseWindow() {
+			console.log("Closing Window");
+			window.alert("Is window closed..." + newWindow.closed);
+		    
+		}
+
+	</script>
+		
+
+
+
+	<table>
+		<tr>
+			<td><button onclick="openWindow()" >Window Open</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="openWindowFacebook()" >Open Facebook</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="closeWindow()" >Close Window</button></td>
+		</tr>
+		<tr>
+			<td><button onclick="isCloseWindow()" >Closed Window</button></td>
+		</tr>
+	</table>
+
+
+
+</body>
+</html>

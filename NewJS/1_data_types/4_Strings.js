@@ -4,7 +4,7 @@
  *	BUT IN OTHER PROGRAMMING LANAGUAGES WE USE DOUBLE QUOTE
  *
  * 
- * Certain chrs have special meaning with regards to strings, for ex we use ' and "  for strings 
+ * Certain characters have special meaning with regards to strings, for ex we use ' and "  for strings 
  * So in order to display these special chars we have to escape (it is like we are removing that special meaning ) them 
  * 	\ <-- Escape char
  * 			' or "  <--- " here we go \' \"somoe quote\" "
